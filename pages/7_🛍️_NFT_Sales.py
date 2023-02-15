@@ -27,7 +27,7 @@ nfts_heatmap = data.get_data('NFTs Heatmap')
 
 # Filter
 options = st.multiselect(
-    '**Select your desired blockchains:**',
+    '**Select your desired Retail Credit Risk:**',
     options=nfts_overview['Blockchain'].unique(),
     default=nfts_overview['Blockchain'].unique(),
     key='nfts_options'
