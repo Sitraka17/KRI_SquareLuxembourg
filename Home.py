@@ -41,15 +41,9 @@ st.write(
     data platform by using its **REST API**. These queries are currently set to **re-run every 24 hours** to cover the latest
     data and are imported as a JSON file directly to each page. The data were selected with a **1 day delay** for all
     blockchains to be in sync with one another. The codes for this tool are saved and accessible in its 
-    [**GitHub Repository**](https://github.com/alitaslimi/cross-chain-monitoring).
+    [**GitHub Repository**](https://sitraka17.github.io/).
 
-    It is worth mentioning that a considerable portion of the data used for this tool was manually decoded from the raw
-    transaction data on some of the blockchains. Besides that, the names of addresses, DEXs, collections, etc. are also
-    manually labeled. As the queries are updated on a daily basis to cover the most recent data, there is a chance
-    that viewers encounter inconsistent data through the app. Due to the heavy computational power required to execute
-    the queries, and also the size of the raw data being too large, it was not feasible to cover data for a longer period,
-    or by downloading the data and loading it from the repository itself. Therefore, the REST API was selected as the
-    proper form of loading data for the time being.
+    It is worth mentioning that this tool is just a POC for KRI. Square Management Luxembourg propose you a better tool.
     """
 )
 
