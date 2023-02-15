@@ -3,10 +3,10 @@ import streamlit as st
 from PIL import Image
 
 # Confit
-st.set_page_config(page_title='Cross Chain Monitoring Tool', page_icon=':bar_chart:', layout='wide')
+st.set_page_config(page_title='Cross Risk Monitoring Tool', page_icon=':bar_chart:', layout='wide')
 
 # Title
-st.title('Cross Chain Monitoring Tool')
+st.title('Cross Risk Monitoring Tool')
 
 # Content
 c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14 = st.columns(14)
@@ -27,19 +27,10 @@ c14.image(Image.open('images/axelar-logo.png'))
 
 st.write(
     """
-    The crypto industry continues to progress and its development has never stopped. Contributors
-    of each blockchain keep developing each segment of the industry and the whole crypto ecosystem.
-    This tool is designed to allow viewers to journey into the world of crypto ecosystems of some
-    of the major blockchains, and compare their performance.
-
-    This tool is designed and structured in multiple **Pages** that are accessible using the sidebar.
-    Each of these Pages addresses a different segment of the crypto industry. Within each segment
-    (Macro, Transfers, Swaps, NFTs, etc.) you are able to filter your desired blockchains to
-    narrow/expand the comparison. By selecting a single blockchain, you can observe a deep dive
-    into that particular network.
-
-    All values for amounts, prices, and volumes are in **U.S. dollars** and the time frequency of the
-    analysis was limited to the last **30 days**.
+    Key Risk Indicators (KRIs) are essential components of any risk management system. 
+    When displayed on the home page of a dashboard overviewing risk, KRIs provide a quick snapshot of the most critical risks facing an organization. 
+    
+    KRIs are used to track and monitor the status of risk management activities and alert stakeholders to emerging risks. By selecting the right KRIs for display on the home page of a dashboard, organizations can effectively communicate risk information to stakeholders, improve risk awareness, and promote informed decision-making.
     """
 )
 
