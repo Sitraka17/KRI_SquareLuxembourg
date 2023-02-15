@@ -60,8 +60,8 @@ st.write(
 
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.info('**Data Analyst: [@Sitraka Forler](https://twitter.com/SitrakaMatthieu)**', icon="💡")
+    st.info('**Data Scientist: [@Sitraka Forler](https://twitter.com/SitrakaMatthieu)**', icon="💡")
 with c2:
     st.info('**GitHub: [@alitaslimi](https://github.com/alitaslimi)**', icon="💻")
 with c3:
-    st.info('**Data: [Flipside Crypto](https://flipsidecrypto.xyz)**', icon="🧠")
+    st.info('** Data [Statistical Data warehouse](https://sdw.ecb.europa.eu/)**', icon="📟")
