@@ -14,7 +14,7 @@ week_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday',
 st.set_page_config(page_title='Fees - Cross Chain Monitoring', page_icon=':bar_chart:', layout='wide')
 
 # Title
-st.title('🪙 Transaction Fees')
+st.title('🪙 Financial Risk')
 
 # Style
 with open('style.css')as f:
