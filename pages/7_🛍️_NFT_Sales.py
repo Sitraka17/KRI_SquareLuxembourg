@@ -21,13 +21,13 @@ with open('style.css')as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 # Data Sources
-nfts_overview = data.get_data('RCR Overview')
-nfts_daily = data.get_data('RCR Daily')
-nfts_heatmap = data.get_data('RCR Heatmap')
+nfts_overview = data.get_data('NFTs Overview')
+nfts_daily = data.get_data('NFTs Daily')
+nfts_heatmap = data.get_data('NFTs Heatmap')
 
 # Filter
 options = st.multiselect(
-    '**Select your desired Retail Credit:**',
+    '**Select your desired blockchains:**',
     options=nfts_overview['Blockchain'].unique(),
     default=nfts_overview['Blockchain'].unique(),
     key='nfts_options'
@@ -35,7 +35,7 @@ options = st.multiselect(
 
 # Selected Blockchain
 if len(options) == 0:
-    st.warning('Please select at least one Retail Credit type to see the metrics.')
+    st.warning('Please select at least one blockchain to see the metrics.')
 
 # Single Chain Analysis
 elif len(options) == 1:
