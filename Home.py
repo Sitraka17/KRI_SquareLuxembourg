@@ -50,9 +50,9 @@ st.write(
 st.subheader('Future Works')
 st.write(
     """
-    This tool is a work in progress and will continue to be developed moving forward. Adding other blockchains,
+    This tool is a work in progress and will continue to be developed moving forward. Adding other Key Risk Idicators,
     more KPIs and metrics, optimizing the code in general, enhancing the UI/UX of the tool, and more importantly,
-    improving the data pipeline by utilizing [**Flipside ShroomDK**](https://sdk.flipsidecrypto.xyz/shroomdk) are
+    improving the data pipeline by utilizing [**Statistical Data warehouse**](https://sdw.ecb.europa.eu/) are
     among the top priorities for the development of this app. Feel free to share your feedback, suggestions, and
     also critics with me.
     """
