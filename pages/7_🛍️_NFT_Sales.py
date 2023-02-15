@@ -11,10 +11,10 @@ theme_plotly = None # None or streamlit
 week_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # Config
-st.set_page_config(page_title='NFTs - Cross Chain Monitoring', page_icon=':bar_chart:', layout='wide')
+st.set_page_config(page_title='Retail Credit Risk Management', page_icon=':bar_chart:', layout='wide')
 
 # Title
-st.title('🛍️ NFT Sales')
+st.title('🛍️ Retail Credit Risk Management')
 
 # Style
 with open('style.css')as f:
