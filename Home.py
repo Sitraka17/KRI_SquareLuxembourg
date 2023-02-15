@@ -8,7 +8,7 @@ st.set_page_config(page_title='Cross Risk Monitoring Tool', page_icon=':bar_char
 # Title
 st.title('Cross Risk Monitoring Tool')
 
-# Content
+# Content change that dam it
 c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14 = st.columns(14)
 c1.image(Image.open('images/ethereum-logo.png'))
 c2.image(Image.open('images/bsc-logo.png'))
@@ -37,7 +37,7 @@ st.write(
 st.subheader('Methodology')
 st.write(
     """
-    The data for this cross-chain comparison were selected from the [**Flipside Crypto**](https://flipsidecrypto.xyz)
+    The data for this cross-chain comparison were selected from the [**Statistical Data warehouse**](https://sdw.ecb.europa.eu/)
     data platform by using its **REST API**. These queries are currently set to **re-run every 24 hours** to cover the latest
     data and are imported as a JSON file directly to each page. The data were selected with a **1 day delay** for all
     blockchains to be in sync with one another. The codes for this tool are saved and accessible in its 
