@@ -11,10 +11,10 @@ theme_plotly = None # None or streamlit
 week_days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 
 # Config
-st.set_page_config(page_title='USDC Transfers - Cross Chain Monitoring', page_icon=':bar_chart:', layout='wide')
+st.set_page_config(page_title='USDC & Credit Risks - Cross Chain Monitoring', page_icon=':bar_chart:', layout='wide')
 
 # Title
-st.title('💸 USDC Transfers')
+st.title('💸 Credit Risks')
 
 # Style
 with open('style.css')as f:
