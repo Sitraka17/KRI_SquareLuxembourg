@@ -28,6 +28,6 @@ with open('style.css')as f:
 #Chart
 chart_data = pd.DataFrame(
     np.random.randn(20, 3),
-    columns=['a', 'b', 'c'])
+    columns=['A-Agriculture', 'C-Manufacturing', 'F-Construction'])
 
 st.line_chart(chart_data)
