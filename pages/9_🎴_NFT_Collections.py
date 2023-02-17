@@ -33,7 +33,7 @@ options = st.multiselect(
 
 # Selected Blockchain
 if len(options) == 0:
-    st.warning('Please select at least one blockchain to see the metrics.')
+    st.warning('Please select at least one indicator to see the metrics.')
 
 # Single Chain Analysis
 elif len(options) == 1:

@@ -1,10 +1,11 @@
-# Libraries
+# Libraries Block 
 import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.subplots as sp
 import data
+import numpy as np
 
 # Global Variables
 theme_plotly = None # None or streamlit
@@ -22,3 +23,11 @@ with open('style.css')as f:
 
 # Data Sources
 
+
+
+#Chart
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
