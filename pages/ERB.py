@@ -31,3 +31,4 @@ chart_data = pd.DataFrame(
     columns=['A-Agriculture', 'C-Manufacturing', 'F-Construction'])
 
 st.line_chart(chart_data)
+
