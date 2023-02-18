@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 # Pie chart, where the slices will be ordered and plotted counter-clockwise:
-labels = 'Poland', 'USA', 'Europe', 
+labels = 'Poland', 'USA', 'Europe' 
 sizes = [15, 30, 45]
 explode = (0, 0.1, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
