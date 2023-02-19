@@ -21,9 +21,9 @@ with open('style.css')as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 # Data Sources
-nfts_overview = data.get_data('NFTs Overview')
-nfts_daily = data.get_data('NFTs Daily')
-nfts_heatmap = data.get_data('NFTs Heatmap')
+nfts_overview = data.get_data('Credits Risks Overview')
+nfts_daily = data.get_data('Credits Risks  Daily')
+nfts_heatmap = data.get_data('Credits Risks  Heatmap')
 
 # Filter
 options = st.multiselect(
