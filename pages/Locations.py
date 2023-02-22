@@ -6,6 +6,8 @@ import plotly.graph_objects as go
 import plotly.subplots as sp
 import data
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 # Global Variables
 theme_plotly = None # None or streamlit
