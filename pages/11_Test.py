@@ -4,12 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-y = np.array([35, 25, 25, 15])
-
+#y = np.array([35, 25, 25, 15])
 #plt.pie(y)
 #plt.show() 
-
-st.pie_chart(y)
+#st.pie_chart(y) C DE LA MERDEEEEEEEEEEEEEE
 
 #mydfdata = [('France', 30), ('Holland', 55), ('Germany',99), ('Others', 43)]
 #mydf = pd.DataFrame(mydfdata, columns=['thing', 'count'])
