@@ -46,12 +46,12 @@ else:
 
         c1, c2 = st.columns(2)
         with c1:
-            fig = px.bar(df, x='Blockchain', y='Volume', color='Blockchain', title='Total Sales Volume', log_y=True)
-            fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title='Volume [USD]', xaxis={'categoryorder':'total ascending'})
+            fig = px.bar(df, x='Blockchain', y='Volume', color='Blockchain', title='Total Sales Volume across Europe', log_y=True)
+            fig.update_layout(showlegend=False, xaxis_title='Activities', yaxis_title='Volume [USD]', xaxis={'categoryorder':'total ascending'})
             st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
         with c2:
             fig = px.bar(df, x='Blockchain', y='Sales', color='Blockchain', title='Total Sales', log_y=True)
-            fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title='Sales', xaxis={'categoryorder':'total ascending'})
+            fig.update_layout(showlegend=False, xaxis_title='Activites', yaxis_title='Sales', xaxis={'categoryorder':'total ascending'})
             st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
        
