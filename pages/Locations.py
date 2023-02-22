@@ -335,22 +335,6 @@ else:
 
         with c2:
             df = nfts_heatmap.query("Blockchain == @options")
-            df['PriceAverage'] = df.groupby('Blockchain')['PriceAverage'].transform(lambda x: (x - x.min()) / (x.max() - x.min()))
-            fig = px.density_heatmap(df, x='Blockchain', y='Hour', z='PriceAverage', histfunc='avg', title='Hourly Heatmap of Normalized Average NFT Prices', nbinsy=24)
-            fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, coloraxis_colorbar=dict(title='Min/Max'))
-            fig.update_xaxes(categoryorder='category ascending')
-            fig.update_yaxes(categoryorder='array', categoryarray=week_days, dtick=2)
-            st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
-            df = nfts_heatmap.query("Blockchain == @options")
-            df['PriceMedian'] = df.groupby('Blockchain')['PriceMedian'].transform(lambda x: (x - x.min()) / (x.max() - x.min()))
-            fig = px.density_heatmap(df, x='Blockchain', y='Hour', z='PriceMedian', histfunc='avg', title='Hourly Heatmap of Normalized Median NFT Prices', nbinsy=24)
-            fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, coloraxis_colorbar=dict(title='Min/Max'))
-            fig.update_xaxes(categoryorder='category ascending')
-            fig.update_yaxes(categoryorder='array', categoryarray=week_days, dtick=2)
-            st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-
-            df = nfts_heatmap.query("Blockchain == @options")
             df['PriceMax'] = df.groupby('Blockchain')['PriceMax'].transform(lambda x: (x - x.min()) / (x.max() - x.min()))
             fig = px.density_heatmap(df, x='Blockchain', y='Hour', z='PriceMax', histfunc='avg', title='Hourly Heatmap of Normalized Maximum NFT Prices', nbinsy=24)
             fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, coloraxis_colorbar=dict(title='Min/Max'))
