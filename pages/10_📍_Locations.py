@@ -43,7 +43,7 @@ else:
     subtab_overview, subtab_prices, subtab_heatmap = st.tabs(['Overview', 'Prices', 'Heatmap'])
     with subtab_overview:
         st.subheader('Overview')
-        df = nfts_overview.query('Blockchain == BSC')
+        df = nfts_overview.query('Blockchain == @options')
 
         c1, c2 = st.columns(2)
         with c1:
