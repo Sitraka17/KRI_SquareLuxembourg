@@ -30,7 +30,7 @@ options = st.multiselect(
     '**Select your desired Retail Credit Risk:**',
     options=nfts_overview['Blockchain'].unique(),
     default=nfts_overview['Blockchain'].unique(),
-    key='nfts_options'
+    key='BSC'
 )
 
 # Selected Blockchain
