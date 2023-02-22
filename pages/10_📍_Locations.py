@@ -21,7 +21,8 @@ with open('style.css')as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html = True)
 
 # Data Sources
-nfts_overview = data.get_data('Region Overview')
+nfts_overview = data.get_data('NFTs Overview')
+
 
 # Filter
 options = st.multiselect(
