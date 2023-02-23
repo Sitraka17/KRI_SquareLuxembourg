@@ -58,10 +58,12 @@ st.write(
     """
 )
 
-c1, c2, c3 = st.columns(3)
+c1, c2, c3, c4 = st.columns(4)
 with c1:
     st.info('**Data Scientist: [@Sitraka Forler](https://twitter.com/SitrakaMatthieu)**', icon="💡")
 with c2:
     st.info('**GitHub: [@Sitraka17](https://github.com/Sitraka17)**', icon="💻")
 with c3:
     st.info('** Data [Statistical Data warehouse](https://sdw.ecb.europa.eu/)**', icon="📟")
+with c4: 
+    st.info('** [ML possibilities](https://www.kaggle.com/code/sitrakamatthew/xgboost-hyperparameter-optimization/edit)**', icon="🤖")
