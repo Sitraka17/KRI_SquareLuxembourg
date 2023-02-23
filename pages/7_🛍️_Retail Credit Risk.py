@@ -46,33 +46,13 @@ elif len(options) == 1:
         st.metric(label='**Total Sales Volume**', value=str(df['Volume'].map('{:,.0f}'.format).values[0]), help='USD')
         st.metric(label='**Total Traded NFTs**', value=str(df['NFTs'].map('{:,.0f}'.format).values[0]))
         st.metric(label='**Average NFT Price**', value=str(df['PriceAverage'].map('{:,.2f}'.format).values[0]), help='USD')
-    with c2:
-        st.metric(label='**Total Sales**', value=str(df['Sales'].map('{:,.0f}'.format).values[0]))
-        st.metric(label='**Total Traded Collections**', value=str(df['Collections'].map('{:,.0f}'.format).values[0]))
-        st.metric(label='**Median NFT Price**', value=str(df['PriceMedian'].map('{:,.2f}'.format).values[0]), help='USD')
-    with c3:
-        st.metric(label='**Total Unique Buyers**', value=str(df['Buyers'].map('{:,.0f}'.format).values[0]))
-        st.metric(label='**Marketplaces**', value=str(df['Marketplaces'].map('{:,.0f}'.format).values[0]))
-        st.metric(label='**Highest NFT Price**', value=str(df['PriceMax'].map('{:,.2f}'.format).values[0]), help='USD')
-    
+
     st.subheader('Averages')
     c1, c2, c3, c4 = st.columns(4)
     with c1:
         st.metric(label='**Average Daily Volume**', value=str(df['Volume/Day'].map('{:,.0f}'.format).values[0]), help='USD')
         st.metric(label='**Average Daily Traded NFTs**', value=str(df['NFTs/Day'].map('{:,.0f}'.format).values[0]))
         st.metric(label='**Average Volume/Collection**', value=str(df['Volume/Collection'].map('{:,.0f}'.format).values[0]), help='USD')
-    with c2:
-        st.metric(label='**Average Volume/Buyer**', value=str(df['Volume/Buyer'].map('{:,.0f}'.format).values[0]), help='USD')
-        st.metric(label='**Average NFTs/Buyer**', value=str(df['NFTs/Buyer'].map('{:,.2f}'.format).values[0]))
-        st.metric(label='**Average NFTs/Collection**', value=str(df['NFTs/Collection'].map('{:,.0f}'.format).values[0]))
-    with c3:
-        st.metric(label='**Average Daily Sales**', value=str(df['Sales/Day'].map('{:,.0f}'.format).values[0]))
-        st.metric(label='**Average Daily Traded Collections**', value=str(df['Collections/Day'].map('{:,.0f}'.format).values[0]))
-        st.metric(label='**Average NFTs/Sale**', value=str(df['NFTs/Sale'].map('{:,.2f}'.format).values[0]), help='USD')
-    with c4:
-        st.metric(label='**Average Sales/Buyer**', value=str(df['Sales/Buyer'].map('{:,.2f}'.format).values[0]))
-        st.metric(label='**Average Collections/Buyer**', value=str(df['Collections/Buyer'].map('{:,.2f}'.format).values[0]))
-        st.metric(label='**Average Daily Buyers**', value=str(df['Buyers/Day'].map('{:,.0f}'.format).values[0]))
 
     st.subheader('Activity Over Time')
     df = nfts_daily.query('Blockchain == @options')
@@ -125,10 +105,6 @@ elif len(options) == 1:
         fig.update_yaxes(categoryorder='array', categoryarray=week_days)
         st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
-        fig = px.density_heatmap(df, x='Hour', y='Day', z='PriceMax', histfunc='avg', title='Heatmap of Max NFT Price', nbinsx=24)
-        fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, xaxis={'dtick': 2}, coloraxis_colorbar=dict(title='Max Price [USD]'))
-        fig.update_yaxes(categoryorder='array', categoryarray=week_days)
-        st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
     with c2:
         fig = px.density_heatmap(df, x='Hour', y='Day', z='Sales', histfunc='avg', title='Heatmap of Sales', nbinsx=24)
         fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, xaxis={'dtick': 2}, coloraxis_colorbar=dict(title='Sales'))
@@ -140,15 +116,7 @@ elif len(options) == 1:
         fig.update_yaxes(categoryorder='array', categoryarray=week_days)
         st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
-        fig = px.density_heatmap(df, x='Hour', y='Day', z='NFTs', histfunc='avg', title='Heatmap of Traded NFTs', nbinsx=24)
-        fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, xaxis={'dtick': 2}, coloraxis_colorbar=dict(title='NFTs'))
-        fig.update_yaxes(categoryorder='array', categoryarray=week_days)
-        st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
-        fig = px.density_heatmap(df, x='Hour', y='Day', z='Collections', histfunc='avg', title='Heatmap of Traded Collections', nbinsx=24)
-        fig.update_layout(legend_title=None, xaxis_title=None, yaxis_title=None, xaxis={'dtick': 2}, coloraxis_colorbar=dict(title='Collections'))
-        fig.update_yaxes(categoryorder='array', categoryarray=week_days)
-        st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
 # Cross Chain Comparison
 else:
@@ -171,14 +139,6 @@ else:
         with c1:
             fig = px.bar(df, x='Blockchain', y='Buyers', color='Blockchain', title='Total Buyers', log_y=True)
             fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title='Buyers', xaxis={'categoryorder':'total ascending'})
-            st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-        with c2:
-            fig = px.bar(df, x='Blockchain', y='NFTs', color='Blockchain', title='Total Traded NFTs', log_y=True)
-            fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title='NFTs', xaxis={'categoryorder':'total ascending'})
-            st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
-        with c3:
-            fig = px.bar(df, x='Blockchain', y='Collections', color='Blockchain', title='Total Traded Collections', log_y=True)
-            fig.update_layout(showlegend=False, xaxis_title=None, yaxis_title='Collections', xaxis={'categoryorder':'total ascending'})
             st.plotly_chart(fig, use_container_width=True, theme=theme_plotly)
 
         st.subheader('Market Shares')
