@@ -24,6 +24,7 @@ def get_data(query):
         #     [arbitrum, avalanche, axelar, bsc, cosmos, ethereum, flow, gnosis, near, optimism, osmosis, polygon, solana]
         #         ).sort_values('Blockchain').reset_index(drop=True)
 
+
     elif query == 'Transactions Daily':
         return pd.read_json('https://node-api.flipsidecrypto.com/api/v2/queries/4e0c69ff-9395-43c1-af49-f590f864d339/data/latest')
         # arbitrum = pd.read_json('https://api.flipsidecrypto.com/api/v2/queries/7b550fd2-39be-465d-9191-a45d8eb2678b/data/latest')
